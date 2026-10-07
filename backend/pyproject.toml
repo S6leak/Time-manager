@@ -1,0 +1,15 @@
+[project]
+name = "time-manager-backend"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.142.2",
+    "psycopg[binary]>=3.3.6",
+    "sqlalchemy>=2.1.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
