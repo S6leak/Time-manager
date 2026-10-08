@@ -1,0 +1,14 @@
+services:
+  db:
+    restart: "no"
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      dockerfile: Dockerfile.dev
+    restart: "no"
+    environment:
+      APP_ENV: development
+    volumes:
+      - ./backend:/app
